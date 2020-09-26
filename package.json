@@ -1,0 +1,27 @@
+{
+  "name": "1xc-common-ts-types",
+  "version": "1.0.0",
+  "description": "common types shared among 1xc UIs written in Typescript",
+  "scripts": {
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "repository": "https://github.com/themx05/1xc-common-ts-types",
+  "author": {
+    "name": "Maximilien Comlan",
+    "email": "maximiliencomlan05@gmail.com",
+    "url": "https://github.com/themx05"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {},
+  "main": "./core/index.js",
+  "types": "./core/index.d.ts",
+  "files": [
+    "core/"
+  ]
+}
