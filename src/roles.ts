@@ -71,7 +71,8 @@ export interface UserRole{
 
 export function userHasRole(needle: ScopedRole, haystack: ScopedRole[]){
     for(let i = 0; i<haystack.length;i++){
-        if(haystack[i].match(needle)){
+        let reg = new RegExp(`^${haystack[i]}$`);
+        if(reg.test(needle)){
             return true;
         }
     }
