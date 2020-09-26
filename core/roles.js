@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.userHasMultiRoles = exports.userHasRole = void 0;
 function userHasRole(needle, haystack) {
     for (let i = 0; i < haystack.length; i++) {
-        if (haystack[i].match(needle)) {
+        let reg = new RegExp(`^${haystack[i]}$`);
+        if (reg.test(needle)) {
             return true;
         }
     }
