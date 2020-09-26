@@ -1,4 +1,4 @@
-import { userHasMultiRoles, userHasRole } from "../src/roles";
+import { userHasMultiRoles, userHasRole } from "../roles";
 
 describe("Test role validator", () => {
     test("User has role", () => {
