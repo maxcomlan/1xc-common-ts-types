@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "common types shared among 1xc UIs written in Typescript",
   "scripts": {
-    "prepare": "npm run build",
     "test": "jest",
-    "build": "tsc"
+    "prebuild": "rimraf core",
+    "build": "npm run prebuild & tsc"
   },
   "keywords": [],
   "repository": "https://github.com/themx05/1xc-common-ts-types",
@@ -17,13 +17,12 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.14",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.4.0",
-    "typescript": "^4.0.3",
-    "jest": "^26.4.2"
+    "typescript": "^4.0.3"
   },
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "main": "./core/index.js",
   "types": "./core/index.d.ts",
   "files": [
