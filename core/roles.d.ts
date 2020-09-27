@@ -13,6 +13,7 @@ declare type SystemLogScope = "system:log:read";
 export declare type UserScope = UserProfileScope | UserBusinessScope | "user:.*:.*";
 export declare type SystemScope = SystemMethodScope | SystemMethodAccountScope | SystemAdminScope | SystemPropertyScope | SystemEventScope | SystemLogScope | "system:.*:.*";
 export declare type ScopedRole = UserScope | TicketScope | WalletScope | InvestmentNetworkScope | AdminRoleScope | SystemScope | ".*:.*:.*";
+export declare const ScopedRoleList: ScopedRole[];
 export interface UserRole {
     id: string;
     roles: ScopedRole[];
