@@ -53,7 +53,7 @@ type SystemAdminScope = "system:admin:read"
 
 type AdminRoleScope = "admin:role:read"
                     |"admin:role:update"
-                    |"admin:role:*";
+                    |"admin:role:.*";
 
 type SystemEventScope = "system:event:read";
 
@@ -120,7 +120,7 @@ export const ScopedRoleList: ScopedRole[] = [
 
     "admin:role:read",
     "admin:role:update",
-    "admin:role:*",
+    "admin:role:.*",
 
     "system:event:read",
     "system:log:read",

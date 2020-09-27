@@ -47,7 +47,7 @@ exports.ScopedRoleList = [
     "system:admin:.*",
     "admin:role:read",
     "admin:role:update",
-    "admin:role:*",
+    "admin:role:.*",
     "system:event:read",
     "system:log:read",
     "user:.*:.*",
