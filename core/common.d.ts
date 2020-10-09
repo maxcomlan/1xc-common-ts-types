@@ -157,8 +157,8 @@ export interface Ticket extends Indexable {
     amount: number;
     rate: number;
     address: string;
-    allowed: number | string;
-    enableCommission: number | string;
+    allowed: boolean;
+    enableCommission: boolean;
     status: TicketStatus;
     emissionDate: number;
     confirmedAt?: number;
@@ -172,6 +172,7 @@ export interface TicketPayment extends Indexable, Money {
     paymentUrl: string;
 }
 export declare type TxType = "in" | "out";
+export declare type TxStatus = "pending" | "done";
 export interface Transaction extends Indexable, Insertable {
     ticketId: string;
     variant: TxType;
@@ -181,7 +182,9 @@ export interface Transaction extends Indexable, Insertable {
     source: string;
     dest: string;
     reference: string;
-    timestamp: number;
+    status: TxStatus;
+    insertedAt: number;
+    validatedAt?: number;
 }
 export interface ExchangeCalculation {
     source: string;
