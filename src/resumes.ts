@@ -1,4 +1,4 @@
-import { Gender, WalletType } from "../core";
+import { Gender, WalletType } from "./common";
 
 export interface WalletResume{
     code: string;
