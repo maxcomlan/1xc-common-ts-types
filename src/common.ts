@@ -162,7 +162,9 @@ export interface TransferDetails extends AmountLimitation{
     currency: string;
 }
 
-export type CardDetails  = AmountLimitation;
+export interface CardDetails extends AmountLimitation {
+    currency: string;
+}
 
 export interface CryptoCurrencyDetails extends AmountLimitation{}
 

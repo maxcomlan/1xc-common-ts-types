@@ -134,7 +134,9 @@ export interface MobileDetails extends AmountLimitation {
 export interface TransferDetails extends AmountLimitation {
     currency: string;
 }
-export declare type CardDetails = AmountLimitation;
+export interface CardDetails extends AmountLimitation {
+    currency: string;
+}
 export interface CryptoCurrencyDetails extends AmountLimitation {
 }
 export declare type MethodDetails = BankingDetails | CardDetails | MobileDetails | TransferDetails | CryptoCurrencyDetails;
