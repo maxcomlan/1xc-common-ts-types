@@ -231,5 +231,11 @@ export interface ExchangeCalculation{
     rateApplied: number;
 }
 
+export interface AccessToken extends Insertable, Patchable{
+    hash: string; /// sha-256 of the generated key
+    owner: string; /// the user id
+    rules: string[];
+}
+
 export * from './investor';
 export * from './roles';
