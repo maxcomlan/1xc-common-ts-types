@@ -130,6 +130,10 @@ export interface MobileDetails extends AmountLimitation {
     address: string;
     currency: string;
     country: string;
+    entranceFee?: {
+        static: number;
+        dynamic: number;
+    };
 }
 export interface TransferDetails extends AmountLimitation {
     currency: string;
