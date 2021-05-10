@@ -1,7 +1,7 @@
 {
   "name": "1xc-common-ts-types",
-  "version": "1.1.10",
-  "description": "common types shared among 1xc UIs written in Typescript",
+  "version": "1.2.0",
+  "description": "common types shared among 1XC UIs written in Typescript",
   "scripts": {
     "test": "jest",
     "prebuild": "rimraf core",

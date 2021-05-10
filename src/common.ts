@@ -97,6 +97,29 @@ export interface WalletRegistrationEntry extends Indexable, Insertable{
     fee: Money;
 }
 
+export interface WalletTransfer extends Indexable, Insertable {
+    sender: {
+        id: string;
+        wallet: string;
+        type: WalletType
+    };
+    receiver: {
+        id: string;
+        wallet: string;
+        type: WalletType
+    };
+    appliedRate: number;
+    sent: Money;
+    received: Money;
+    fees: Money;
+    proofs: {
+        sender: string; /// sender emission history ID
+        receiver: string; /// receiver reception history ID
+    }
+    status: "completed";
+    reason?: string;
+}
+
 export interface Admin extends Indexable, Insertable{
     firstName: string;
     lastName: string;
