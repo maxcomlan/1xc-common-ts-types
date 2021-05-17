@@ -133,6 +133,12 @@ export interface BusinessProfile extends Indexable, Insertable, Patchable {
     documents: Document[];
     verificationDate?: number;
     status: BusinessProfileStatus;
+    corrections?: IBusinessCorrection[];
+}
+export interface IBusinessCorrection {
+    title: String;
+    content: String;
+    submittedAt: number;
 }
 export declare type MethodCategory = "banking" | "card" | "mobile" | "transfer" | "cryptocurrency";
 export interface AmountLimitation {
