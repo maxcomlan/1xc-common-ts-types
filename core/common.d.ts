@@ -1,4 +1,5 @@
 import { NetworkRule } from "./investor";
+import { PriceStep } from "./pricing";
 import { ScopedRole } from "./roles";
 interface Indexable {
     id: string;
@@ -13,12 +14,18 @@ export interface Money {
     amount: number;
     currency: string;
 }
+export interface TransfertProperties {
+    pricings: {
+        [key: string]: PriceStep[];
+    };
+}
 export interface SystemProperties {
     wallets: {
         businessAccountFee: Money;
         allowedCurrencies: string[];
     };
     investment?: NetworkRule;
+    transfert?: TransfertProperties;
 }
 export interface OnlineApiAccount {
     publicKey: string;
