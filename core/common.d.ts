@@ -102,6 +102,7 @@ export interface WalletTransfer extends Indexable, Insertable {
     sent: Money;
     received: Money;
     fees: Money;
+    earning?: Money;
     proofs: {
         sender: string;
         receiver: string;
