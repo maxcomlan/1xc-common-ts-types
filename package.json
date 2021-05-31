@@ -1,6 +1,6 @@
 {
   "name": "1xc-common-ts-types",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "common types shared among 1XC UIs written in Typescript",
   "scripts": {
     "test": "jest",

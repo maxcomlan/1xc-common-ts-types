@@ -175,7 +175,7 @@ class PriceEngine {
                 let deduction = parseFloat((price * amount / 100).toFixed(2));
                 let merchantFee = parseFloat((deduction * merchant / 100).toFixed(2));
                 return {
-                    total: amount,
+                    total: deduction,
                     merchant: merchantFee,
                     system: amount - merchantFee,
                     rest: price - deduction
@@ -183,7 +183,7 @@ class PriceEngine {
             }
         }
         return {
-            total: price,
+            total: 0,
             merchant: 0,
             system: 0,
             rest: price
