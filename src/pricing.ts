@@ -74,7 +74,7 @@ class PriceUtils {
 
 export class PriceEngine {
 
-    priceLine: PriceStep[];
+    priceLine: PriceStep[] = [];
 
     constructor(steps: PriceStep[]) {
         this.priceLine = steps;
