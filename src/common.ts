@@ -23,6 +23,9 @@ export interface TransfertProperties {
     pricings: {
         [key: string]: PriceStep[];
     };
+    webPricings: {
+        [key: string]: PriceStep[];
+    }
 }
 
 export interface SystemProperties{
