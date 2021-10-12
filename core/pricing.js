@@ -46,7 +46,7 @@ class PriceUtils {
     }
 }
 class PriceEngine {
-    priceLine;
+    priceLine = [];
     constructor(steps) {
         this.priceLine = steps;
     }
