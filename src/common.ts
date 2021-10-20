@@ -293,5 +293,31 @@ export interface AccessToken extends Insertable, Patchable{
     rules: string[];
 }
 
+export interface Project extends Indexable, Insertable, Patchable {
+    name: string;
+    commissionRate: number;
+    logo: string;
+    walletId: string;
+    userId: string;
+}
+
+export type PaymentStatus = "pending" | "confirmed" | "cancelled" | "paid";
+export type BusinessPIStatus = PaymentStatus | "failed" | "expired";
+export interface BusinessPaymentIntent extends Money, Indexable, Insertable {
+    responseURL: string;
+    projectId: string;
+    status: BusinessPIStatus;
+    emissionDate: number;
+    paymentURL: string;
+    reason?: string;
+    confirmedAt?: number;
+    paidAt?: number;
+    cancelledAt?: number;
+    userId?: string;
+    walletId?: string;
+    failureText?: string;
+}
+
+
 export * from './investor';
 export * from './roles';
