@@ -1,9 +1,8 @@
 {
   "name": "1xc-common-ts-types",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "common types shared among 1XC UIs written in Typescript",
   "scripts": {
-    "test": "jest",
     "transpile": "babel core --out-dir core",
     "prebuild": "rimraf core",
     "build": "npm run prebuild & tsc && npm run transpile"
@@ -18,7 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.15.8",
-    "@types/jest": "^26.0.23",
     "jest": "^27.2.5",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.5",
